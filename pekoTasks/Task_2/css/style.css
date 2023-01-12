@@ -1,0 +1,60 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.content-left{
+    margin: 4rem 0 0 0;
+    padding-left: 0;
+    align-items: center;
+}
+.content-right{
+    margin: 4rem 0 0 0;
+    align-items: center;
+}
+div{
+    display: flex;
+}
+
+fieldset{
+    margin: 30px 0 30px 0;
+}
+
+legend{
+    font-weight: bold;
+}
+
+input[type=text], input[type=email], select{
+    margin: 10px 10px 10px 0;
+}
+
+a{
+    color: black;
+}
+
+p{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.btn-dark{
+border-radius: 15px;
+color: #fff;
+font-weight: bold;
+}
+
+figcaption{
+    font-size: 20px;
+    color: black;
+    margin-top: 10px;
+    margin-right: 29%;
+}
+
+.logo{
+    width: 50%;
+}
+
+.front-image{
+    width: 60%;
+}

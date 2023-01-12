@@ -1,0 +1,31 @@
+body {
+    background-image: url('https://thumbs.dreamstime.com/b/train-stop-railway-station-snow-winter-japan-shinshinotsu-january-january-shinshinotsu-important-82564642.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+body {
+    text-align: center;
+    padding: 200px;
+    margin: auto;
+}
+
+h1,h2{
+    font-size: 50px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+p{
+    font-size:25px;
+    font-weight: 500;
+}
+
+button {
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    width: 200px;
+    margin:5px;
+}
