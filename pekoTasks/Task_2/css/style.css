@@ -1,60 +1,74 @@
-body{
+body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-.content-left{
+
+.content-left {
     margin: 4rem 0 0 0;
     padding-left: 0;
     align-items: center;
 }
-.content-right{
+
+.content-right {
     margin: 4rem 0 0 0;
     align-items: center;
 }
-div{
+
+div {
     display: flex;
 }
 
-fieldset{
+fieldset {
     margin: 30px 0 30px 0;
 }
 
-legend{
+legend {
     font-weight: bold;
 }
 
-input[type=text], input[type=email], select{
+input[type=text],
+input[type=email],
+select {
     margin: 10px 10px 10px 0;
 }
 
-a{
+a {
     color: black;
 }
 
-p{
+p {
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
-.btn-dark{
-border-radius: 15px;
-color: #fff;
-font-weight: bold;
+.btn-dark {
+    border-radius: 15px;
+    color: #fff;
+    font-weight: bold;
 }
 
-figcaption{
+figcaption {
     font-size: 20px;
     color: black;
     margin-top: 10px;
     margin-right: 29%;
 }
 
-.logo{
+.logo {
     width: 50%;
 }
 
-.front-image{
+.front-image {
     width: 60%;
+}
+
+label.alertFail {
+    border: 2px solid red;
+    border-radius: 2px;
+    line-height: 1;
+    line-break: strict;
+    padding: 2px;
+    background: #ffe6eb;
 }

@@ -43,30 +43,23 @@
             <div class="input-group">
               <div class="col-6">
                 <input type="text" value="" name="firstname" id="firstname" class="form-control"
-                  placeholder="First Name" required oninvalid="this.setCustomValidity('First Name Required')"
-                  oninput="this.setCustomValidity('')" autofocus>
+                  placeholder="First Name">
               </div>
               <div class="col-6">
-                <input type="text" name="lastname" id="lastname" class="form-control" placeholder="Last Name"
-                  oninvalid="this.setCustomValidity('Last Name Required')" oninput="this.setCustomValidity('')"
-                  required>
+                <input type="text" name="lastname" id="lastname" class="form-control" placeholder="Last Name">
               </div>
             </div>
             <div class="input-group col-12">
               <div class="col-6">
-                <input type="text" name="designation" id="designation" class=" form-control" placeholder="Designation"
-                  required oninvalid="this.setCustomValidity('Designation Required')"
-                  oninput="this.setCustomValidity('')">
+                <input type="text" name="designation" id="designation" class=" form-control" placeholder="Designation">
               </div>
               <div class="col-6">
                 <input type="text" name="mobile" id="mobile" class="form-control" placeholder="Mobile Number"
-                  maxlength="10" pattern="[0-9]{10}" required>
+                  maxlength="12">
               </div>
-              <p class="mobilePattern"></p>
             </div>
             <div class="input-group">
-              <input type="email" name="email" id="email" placeholder="Business Email Address" class="form-control"
-                required>
+              <input type="email" name="email" id="email" placeholder="Business Email Address" class="form-control">
             </div>
           </fieldset>
           <fieldset>
@@ -100,9 +93,11 @@
       <!-- End of Right Content -->
     </div>
   </div>
-  <script src="../javaScript/jquery-3.6.3.min.js"></script>
+  <!-- <script src="../javaScript/jquery-3.6.3.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
   <script src="../javaScript/myJquery.js"></script>
-  
+
   <!-- <script src="../javaScript/script.js"></script> -->
 </body>
 
