@@ -3,33 +3,63 @@ $(document).ready(function () {
    /*--- Form Validation Start ---*/
    $('.form-details').validate({
       errorClass: "alertFail",
-      validClass: "valid alertSuccess",
-      errorElement: "label",
-
+      validClass: "alertSuccess",
+      // errorElement: 'div',
       rules: {
-         firstname: 'required',
+         firstname: {
+            required: true,
+            minlength: 3
+         },
          lastname: 'required',
          designation: 'required',
          mobile: {
             required: true,
             number: true,
-            maxlength: 12,
-            minlength: 10
+            minlength:10,
+            maxlength: 10,
          },
          email: {
             required: true,
             email: true,
          }
       },
+
       /*--- Below Code is for Custom Messages ---*/
       messages: {
-         firstname: "Please enter first name",
-         lastname: "Please enter last name",
-         designation: "Please enter your designation",
-         mobile: "The mobile no should be 10-12 digits",
-         email: "The email should be : abc@domain.tld"
+         firstname: {
+            required: "*Please enter your first name.",
+            mailength: "*Please enter at least 3 characters."
+         },
+         lastname: "*Please enter your last name.",
+         designation: "*Please enter your designation.",
+         mobile: {
+            required:"*Please enter mobile number.",
+            minlength:"*Please enter 10 digits",
+            maxlength:"*Enter 10 digits"
+         },
+         email: "*enter a valid email address like- abc@domain.tld"
+      },
+      errorPlacement: function (error, element) {
+         if (element.attr('name') == 'firstname') {
+            error.appendTo('.err-fname');
+         }
+        else if (element.attr('name') == 'lastname') {
+            error.appendTo('.err-lname');
+         }
+         else if (element.attr('name') == 'designation') {
+            error.appendTo('.err-desgntion');
+         }
+         else if (element.attr('name') == 'mobile') {
+            error.appendTo('.err-mble');
+         }
+        else if (element.attr('name') == 'email') {
+            error.appendTo('.err-email');
+         }else{
+            error.appendTo(element)
+         }
       }
    });
+   /*--- Form Validation End ---*/
 
    /*--- Form Data Shown To Console Start ---*/
    //The below code to console the form data as Object
@@ -44,31 +74,11 @@ $(document).ready(function () {
          company: $('#company').val(),
          city: $('#city').val(),
          businessActivity: $('#businessActivity').val()
-
       };
       console.log(values);
    });
    /*--- Form Data Shown To Console End ---*/
 
-   /*--- Form Console Data Starts Here ---*/
-   /*--- The below code is to console the form data as encoded text string. ---*/
-   // $('.form-details').submit(function (e) {
-   //    e.preventDefault();
-   //    const values = $(this).serialize();
-   //    console.log(values);
-   // });
-   /*--- Form Console Data Ends Here ---*/
-
-   /*--- Other way of getting the form data as Array --*/
-   /*-- Code Start --*/
-
-   //  $('.form-details').submit(function (e) {
-   //    e.preventDefault();
-   //    const values = $(this).serializeArray();
-   //    console.log(values);
-   // });
-
-   /*-- Code End --*/
 
    /*--- Form Reset Code Starts Here ---*/
    //The below code is to reset the form details

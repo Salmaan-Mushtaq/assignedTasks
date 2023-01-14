@@ -14,77 +14,91 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container align-items-center h-100 w-100">
     <div class="row row-cols-2">
       <!-- Start of left content -->
-      <div class="content-left">
-        <div class="row">
-          <div class="row mb-3">
-            <figure>
-              <img src="../image/pekologo.png" alt="logo" class="d-inline-block logo">
-            </figure>
-          </div>
-          <div class="row">
-            <figure>
-              <img src="../image/MicrosoftTeams-image.png" alt="image is not available" class="front-image" />
-              <figcaption>Streamlining business payments, expenses and corporate cards </figcaption>
-            </figure>
-          </div>
+      <div class="row align-items-center content-left">
+        <div class="row fig-caption">
+          <img src="../image/pekologo.png" alt="logo" class="logo p-2">
+          <figure class="p-2">
+            <img src="../image/MicrosoftTeams-image.png" alt="image is not available"
+              class="front-image" />
+            <figcaption>Streamlining business payments, expenses and corporate cards </figcaption>
+          </figure>
         </div>
       </div>
       <!-- End of right content -->
 
       <!-- Start of Left Content -->
-      <div class="content-right col-6">
-        <form method="POST" class="form-details">
+      <div class="content-right col">
+        <form class="form-details" method="POST">
           <h2 class="text-center">Let's Get Started</h2>
-          <fieldset>
-            <legend> Personal Information</legend>
-            <div class="input-group">
-              <div class="col-6">
+          <section>
+            <legend>Personal Information</legend>
+            <div class="row">
+              <div class="error err-fname col"></div>
+              <div class="error err-lname col"></div>
+            </div>
+            <div class="row">
+              <div class="col">
                 <input type="text" value="" name="firstname" id="firstname" class="form-control"
                   placeholder="First Name">
               </div>
-              <div class="col-6">
+              <div class="col">
                 <input type="text" name="lastname" id="lastname" class="form-control" placeholder="Last Name">
               </div>
             </div>
-            <div class="input-group col-12">
-              <div class="col-6">
-                <input type="text" name="designation" id="designation" class=" form-control" placeholder="Designation">
-              </div>
-              <div class="col-6">
-                <input type="text" name="mobile" id="mobile" class="form-control" placeholder="Mobile Number"
-                  maxlength="12">
-              </div>
+            <div class="row">
+              <div class="error err-desgntion col"></div>
+              <div class="error err-mble col"></div>
             </div>
-            <div class="input-group">
-              <input type="email" name="email" id="email" placeholder="Business Email Address" class="form-control">
-            </div>
-          </fieldset>
-          <fieldset>
-            <legend> About Company</legend>
-            <div class="col-12">
-              <input type="text" name="company" id="company" placeholder="Company Name" class="form-control">
-            </div>
-            <div class="form-group">
-              <div class="form-row col-6">
-                <select name="city" id="city" class="form-control">
-                  <option value="" selected>Select City</option>
-                  <option value="Srinagar">Srinagar</option>
-                  <option value="Pulwama">Pulwama</option>
-                  <option value="Budgam">Budgam</option>
-                </select>
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" id="designation" placeholder="Designation" name="designation">
               </div>
-              <div class="col-6 form-row">
-                <input type="text" class="form-control" name="businessActivity" id="businessActivity"
-                  placeholder="Business Activity">
+              <div class="col">
+                <input type="text" class="form-control" name="mobile" id="mobile" placeholder="Mobile Number"
+                  maxlength="10">
               </div>
             </div>
-          </fieldset>
-          <div>
-            <button class="btn btn-dark w-75 btnSubmit">Submit</button>
-            <button class="btnReset btn btn-success w-25 rounded-pill ms-2">Reset</button>
+
+            <div class="row">
+              <div class="col-12 error err-email">
+              </div>
+              <div class="col">
+                <input type="email" name="email" id="email" placeholder="Business Email Address" class="form-control">
+              </div>
+            </div>
+          </section>
+          <section>
+            <legend>About Company</legend>
+            <div class="row">
+              <div class="col">
+                <input type="text" name="companyname" class="form-control" id="companyName" placeholder="Company Name">
+              </div>
+              <div class="row">
+                <div class="col">
+                  <select name="city" id="city" class="form-control">
+                    <option value="">Select City</option>
+                    <option value="srinagar">Srinagar</option>
+                    <option value="pulwama">Pulwama</option>
+                    <option value="budgam">Budgam</option>
+                    <option value="ganderbal">Ganderbal</option>
+                  </select>
+                </div>
+                <div class="col">
+                  <input type="text" name="businessactivity" class="form-control" id="businessActivity"
+                    placeholder="Business Activity">
+                </div>
+              </div>
+          </section>
+          <div class="row">
+            <div class="col-8">
+              <button class="btn w-100 btn-dark btnSubmit">Submit</button>
+            </div>
+            <div class="col-4">
+              <button class="btnReset w-100 btn btn-success rounded-pill">Reset</button>
+            </div>
           </div>
           <p>Already have an account? </p>
           <p><a href="#">Login</a> </p>
@@ -93,12 +107,11 @@
       <!-- End of Right Content -->
     </div>
   </div>
-  <!-- <script src="../javaScript/jquery-3.6.3.min.js"></script> -->
+  <!-- <script src="/script/jquery-3.6.3.min.js"></script> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
   <script src="../javaScript/myJquery.js"></script>
-
-  <!-- <script src="../javaScript/script.js"></script> -->
+  <!-- <script src="../scriptJava.js"></script> -->
 </body>
 
 </html>
